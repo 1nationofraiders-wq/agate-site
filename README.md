@@ -95,6 +95,16 @@ this site is served over HTTPS. For production, put the backend behind HTTPS
 `API_BASE_URL` to that HTTPS URL. The bundled fallback still works if the API
 is unreachable.
 
+## Free hosting (current state, no domain)
+
+The site is live at
+https://1nationofraiders-wq.github.io/agate-site/ with `API_BASE_URL: ''`, so
+it uses only bundled data and makes no mixed-content requests. The APK is a
+GitHub Release asset and the release metadata lives at
+`releases/agate-lens.json`. SHA-256 in that file was verified against the
+downloaded asset. Moving to a domain later is a config change via
+`go_live.py`; no site code changes are needed.
+
 ## Direct APK downloads
 
 `downloads.html` is the download page. It calls `GET /api/releases/agate-lens/latest`
