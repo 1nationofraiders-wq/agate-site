@@ -105,6 +105,8 @@ window.AGATE_CONFIG = Object.freeze({
   FALLBACK_CATALOG: 'catalog.json',
   RELEASE_PATH: '/api/releases/agate-lens/latest',
   FALLBACK_RELEASE: 'releases/agate-lens.json',
+  LEADS_PATH: '/api/store/leads',
+  CONTACT_EMAIL: 'you@example.com', // <-- set before publishing, or leads stay in the visitor's browser
   PRIVACY_POLICY_URL: 'https://1nationofraiders-wq.github.io/agate-lens-privacy/'
 });
 ```
