@@ -21,6 +21,6 @@ window.AGATE_CONFIG = Object.freeze({
   // Leave blank on free static hosting: entries are saved in the browser and
   // opened as a pre-filled email. Set this to the address that should receive
   // quote requests and giveaway entries.
-  CONTACT_EMAIL: '',
+  CONTACT_EMAIL: '1nationofraiders@gmail.com', // contact address published in the privacy policy
   PRIVACY_POLICY_URL: 'https://1nationofraiders-wq.github.io/agate-lens-privacy/'
 });

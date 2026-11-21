@@ -59,11 +59,11 @@ Only an admin with `X-API-Key` can read the list at `GET /api/store/leads`;
 there is a six-per-hour throttle per IP. No payment data is collected.
 
 On free static hosting with `API_BASE_URL: ''`, entries are saved in the
-visitor's browser and, if `CONTACT_EMAIL` in `config.js` is set, opened as a
-pre-filled email. **Set `CONTACT_EMAIL` before publishing**, otherwise entries
-stay on the visitor's device and never reach you. For automatic capture, point
-`API_BASE_URL` at an HTTPS backend (HTTP is blocked by browsers on an HTTPS
-site).
+visitor's browser and opened as a pre-filled email to `CONTACT_EMAIL` (set to
+the address published in the privacy policy). Keep that address current;
+without one, entries stay on the visitor's device and never reach you. For
+automatic capture, point `API_BASE_URL` at an HTTPS backend (HTTP is blocked by
+browsers on an HTTPS site).
 
 Sponsored entries must be labelled as sponsored. This page is a hub, not an ad
 network: no click tracking, no third-party ad serving, and no sharing personal
@@ -106,7 +106,7 @@ window.AGATE_CONFIG = Object.freeze({
   RELEASE_PATH: '/api/releases/agate-lens/latest',
   FALLBACK_RELEASE: 'releases/agate-lens.json',
   LEADS_PATH: '/api/store/leads',
-  CONTACT_EMAIL: 'you@example.com', // <-- set before publishing, or leads stay in the visitor's browser
+  CONTACT_EMAIL: '1nationofraiders@gmail.com', // published in the privacy policy
   PRIVACY_POLICY_URL: 'https://1nationofraiders-wq.github.io/agate-lens-privacy/'
 });
 ```

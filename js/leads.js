@@ -37,8 +37,9 @@
   function send(payload) {
     if (!base) {
       savePending(payload);
+      var emailed = !!contactEmail;
       openMail(payload);
-      return Promise.resolve({ ok: false, offline: true });
+      return Promise.resolve({ ok: false, offline: true, emailed: emailed });
     }
     var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
     var timer = controller ? setTimeout(function () { controller.abort(); }, 8000) : null;
@@ -81,12 +82,21 @@
       if (button) button.disabled = true;
       send(payload).then(function (result) {
         if (status) {
-          status.textContent = result && result.offline
-            ? 'Saved on this device. Our live form is not connected yet — set CONTACT_EMAIL in config.js so entries can be emailed to us.'
-            : 'Thanks — we received your entry and will be in touch.';
+          if (result && result.offline) {
+            status.textContent = result.emailed
+              ? 'Saved on this device and opened in your email app — please send the pre-filled email to reach us.'
+              : 'Saved on this device. Our live form is not connected yet — set CONTACT_EMAIL in config.js so entries can be emailed to us.';
+          } else {
+            status.textContent = 'Thanks — we received your entry and will be in touch.';
+          }
         }
         form.reset();
-        document.dispatchEvent(new CustomEvent('agate-lead-ok', { detail: payload }));
+        document.dispatchEvent(new CustomEvent('agate-lead-ok', {
+          detail: Object.assign({}, payload, {
+            offline: !!(result && result.offline),
+            emailed: !!(result && result.emailed)
+          })
+        }));
       }).catch(function () {
         if (status) status.textContent = 'Could not send right now. Please try again in a moment.';
       }).then(function () {

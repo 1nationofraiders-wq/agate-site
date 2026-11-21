@@ -50,8 +50,11 @@
     document.addEventListener('agate-lead-ok', function (event) {
       if (!event.detail || event.detail.source !== 'win_entry') return;
       var body = modal.querySelector('.win-body');
-      body.innerHTML = '<p class="win-thanks"><strong>You are in.</strong> Thanks for entering — we will email the winner after the draw. ' +
-        'Want to skip the wait? <a href="build-for-you.html">See our app-build service.</a></p>' +
+      var note = (event.detail.offline && event.detail.emailed)
+        ? ' Please send the pre-filled email your mail app opens — until you do, your entry has not reached us.'
+        : '';
+      body.innerHTML = '<p class="win-thanks"><strong>You are in.</strong> Thanks for entering — we will email the winner after the draw.' + note +
+        ' Want to skip the wait? <a href="build-for-you.html">See our app-build service.</a></p>' +
         '<p class="win-fine"><a href="win-rules.html">Full rules</a></p>';
     });
   }
