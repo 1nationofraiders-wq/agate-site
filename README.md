@@ -50,7 +50,9 @@ curl -X PUT http://HOST/api/hub/docs/winners/<id> \
 service ("we build an app for you"). `win-rules.html` carries the honest
 giveaway rules: no purchase necessary, one entry per email, monthly draw, no
 cash alternative. Both are labelled as our own service — no third-party ads,
-no click tracking, no fake "you already won" popups.
+no click tracking, no fake "you already won" popups. Four planning tiers are
+shown: Quick Fix from $49, Starter from $149, Pro from $349 and Custom by quote.
+`service-flyer.pdf` is a one-page handout with the same honest scope and prices.
 
 Entry and quote forms in those pages (and the promo strips on `index.html` and
 `hub.html`) post to `POST /api/store/leads` when `API_BASE_URL` is configured.
@@ -78,6 +80,7 @@ review before launch.
 | `downloads.html` | Direct APK page: version, checksum, install warnings |
 | `hub.html` | Shared app hub: winners, appreciation, partners, promo strip |
 | `build-for-you.html` | Advertisement / landing page for our app-build service + quote form |
+| `service-flyer.pdf` | Printable one-page version of the service and prices |
 | `win-rules.html` | Official giveaway rules (no purchase necessary) |
 | `js/leads.js` | Sends quote/giveaway forms to the leads API, with local/email fallback |
 | `js/win-window.js` | Honest "Win a free app build" popup (no fake win claims) |
