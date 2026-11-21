@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agate Lens — field journal for agate scoring</title>
+  <meta name="description" content="Agate Lens: a free field-journal app for agate scoring, digital Pro features via Google Play Billing, and physical light kits sold on our web store.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="config.js"></script>
+  <script src="js/products.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">Agate<span class="dot">.</span>Lens</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html#store">Store</a>
+      <a href="index.html#free">Free app</a>
+      <a href="downloads.html">Download APK</a>
+      <a href="index.html#digital">Digital Pro</a>
+      <a href="index.html#kits">Light kits</a>
+      <a href="index.html#details">Details</a>
+      <a href="hub.html">Our Apps</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="site-nav site-nav--legal" aria-label="Legal and policy navigation">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="refunds.html">Refund &amp; Return</a>
+      <a href="shipping.html">Shipping</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Field journal for agate scoring</p>
+      <h1>Agate Lens</h1>
+      <p>Record finds, score banding and translucency, and keep a field journal of the agates you collect — on your phone, in the field.</p>
+      <p>Three ways to use it: the free app, digital Pro features inside the app, and optional physical light kits.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="notices-title">
+    <div class="wrap">
+      <div class="notice notice--warn">
+        <h2 id="notices-title">Please read: how purchasing works here</h2>
+        <ul>
+          <li><strong>Price and link to be confirmed.</strong> Every price and store URL in the catalog is a placeholder. Nothing on this site is a final price or a working buy link.</li>
+          <li><strong>Kit codes are not digital unlocks.</strong> Physical light kit registration codes prove kit ownership and support only. They do <em>not</em> unlock digital Pro features.</li>
+          <li><strong>Digital Pro uses Play Billing.</strong> Agate Lens Pro features are bought through Google Play Billing inside the app. This site does not sell or unlock them.</li>
+          <li><strong>No payment handling.</strong> This site does not accept payments, collect card details, or process any transaction.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="store" aria-labelledby="store-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="store-title">Store catalog</h2>
+        <p>Product cards below are loaded from the catalog API when it is reachable, and from a bundled <code>catalog.json</code> copy otherwise. Names and SKU slugs are reused exactly from the catalog. Prices and links are always shown as placeholders.</p>
+      </div>
+      <p class="catalog-status" id="catalog-status" role="status">Catalog is loaded from the backend when available, otherwise from a bundled copy. Price and link to be confirmed.</p>
+
+      <h3 class="subhead" id="free">Free <span class="hint">no purchase needed</span></h3>
+      <div class="card-grid" id="cards-free" data-kind="free">
+        <article class="product-card product-card--free">
+          <div class="product-card__head"><span class="badge badge--free">Free</span><code class="slug">agate-lens-free</code></div>
+          <h4 class="product-card__title">Agate Lens (free)</h4>
+          <p class="placeholder">Price and link to be confirmed</p>
+          <p class="product-card__note">The free Agate Lens app. No purchase needed.</p>
+        </article>
+      </div>
+
+      <h3 class="subhead" id="digital">Digital Pro <span class="hint">sold in the app via Google Play Billing</span></h3>
+      <div class="card-grid" id="cards-digital" data-kind="digital">
+        <article class="product-card product-card--digital">
+          <div class="product-card__head"><span class="badge badge--digital">Digital Pro — Play Billing</span><code class="slug">agate-lens-pro</code></div>
+          <h4 class="product-card__title">Agate Lens Pro</h4>
+          <p class="placeholder">Price and link to be confirmed</p>
+          <p class="product-card__note">Digital Pro features are purchased inside the app through Google Play Billing, not on this site.</p>
+        </article>
+      </div>
+
+      <h3 class="subhead" id="kits">Physical light kits <span class="hint">sold on our web store</span></h3>
+      <div class="card-grid" id="cards-kit" data-kind="kit">
+        <article class="product-card product-card--kit">
+          <div class="product-card__head"><span class="badge badge--kit">Physical light kit</span><code class="slug">kit-starter</code></div>
+          <h4 class="product-card__title">Starter light kit</h4>
+          <p class="placeholder">Price and link to be confirmed</p>
+          <p class="product-card__note">A physical light kit. Registration codes prove kit ownership and support only — they do NOT unlock digital Pro features.</p>
+        </article>
+        <article class="product-card product-card--kit">
+          <div class="product-card__head"><span class="badge badge--kit">Physical light kit</span><code class="slug">kit-journeyman</code></div>
+          <h4 class="product-card__title">Journeyman light kit</h4>
+          <p class="placeholder">Price and link to be confirmed</p>
+          <p class="product-card__note">A physical light kit. Registration codes prove kit ownership and support only — they do NOT unlock digital Pro features.</p>
+        </article>
+        <article class="product-card product-card--kit">
+          <div class="product-card__head"><span class="badge badge--kit">Physical light kit</span><code class="slug">kit-pro</code></div>
+          <h4 class="product-card__title">Pro light kit</h4>
+          <p class="placeholder">Price and link to be confirmed</p>
+          <p class="product-card__note">A physical light kit. Registration codes prove kit ownership and support only — they do NOT unlock digital Pro features.</p>
+        </article>
+      </div>
+
+      <div id="cards-other" data-kind="other" hidden></div>
+    </div>
+  </section>
+
+  <section id="download" aria-labelledby="download-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="download-title">Download the free app</h2>
+        <p>Install the free Agate Lens APK directly from our own site. The download page shows the latest version, size and SHA-256 checksum before you install.</p>
+      </div>
+      <div class="card-grid">
+        <article class="product-card product-card--free">
+          <div class="product-card__head"><span class="badge badge--free">Direct APK</span><code class="slug">agate-lens</code></div>
+          <h3 class="product-card__title">Agate Lens (free)</h3>
+          <p class="product-card__note">No purchase needed. Android will ask you to allow installation from an unknown source; verify the checksum on the download page.</p>
+          <p><a class="button" href="downloads.html">View latest release</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="details" aria-labelledby="details-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="details-title">Product details</h2>
+        <p>One entry per catalog SKU. Names and slugs match the catalog exactly; specifications, prices and purchase links are intentionally left unconfirmed.</p>
+      </div>
+      <div class="detail-list">
+        <article class="detail" data-slug="agate-lens-free">
+          <div class="meta"><span class="badge badge--free">Free</span><code class="slug">agate-lens-free</code></div>
+          <h3>Agate Lens (free)</h3>
+          <p>The free Agate Lens app: a field journal for recording agate finds and scoring them in the field. No purchase is required to use the free tier.</p>
+          <p class="placeholder">Price and link to be confirmed</p>
+        </article>
+
+        <article class="detail" data-slug="agate-lens-pro">
+          <div class="meta"><span class="badge badge--digital">Digital Pro — Play Billing</span><code class="slug">agate-lens-pro</code></div>
+          <h3>Agate Lens Pro</h3>
+          <p>Digital Pro features are sold through Google Play Billing inside the Agate Lens app. This website neither sells nor unlocks digital Pro features, and it does not process payments.</p>
+          <p class="placeholder">Price and link to be confirmed</p>
+        </article>
+
+        <article class="detail" data-slug="kit-starter">
+          <div class="meta"><span class="badge badge--kit">Physical light kit</span><code class="slug">kit-starter</code></div>
+          <h3>Starter light kit</h3>
+          <p>An entry-level physical light kit for agate work. Contents, specifications, price and purchase link are to be confirmed.</p>
+          <p>A kit registration code proves kit ownership and support only. It is not a digital Pro unlock.</p>
+          <p class="placeholder">Price and link to be confirmed</p>
+        </article>
+
+        <article class="detail" data-slug="kit-journeyman">
+          <div class="meta"><span class="badge badge--kit">Physical light kit</span><code class="slug">kit-journeyman</code></div>
+          <h3>Journeyman light kit</h3>
+          <p>A mid-tier physical light kit for agate work. Contents, specifications, price and purchase link are to be confirmed.</p>
+          <p>A kit registration code proves kit ownership and support only. It is not a digital Pro unlock.</p>
+          <p class="placeholder">Price and link to be confirmed</p>
+        </article>
+
+        <article class="detail" data-slug="kit-pro">
+          <div class="meta"><span class="badge badge--kit">Physical light kit</span><code class="slug">kit-pro</code></div>
+          <h3>Pro light kit</h3>
+          <p>A top-tier physical light kit for agate work. Contents, specifications, price and purchase link are to be confirmed.</p>
+          <p>A kit registration code proves kit ownership and support only. It is not a digital Pro unlock.</p>
+          <p class="placeholder">Price and link to be confirmed</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <strong>Agate Lens</strong><br>
+        A field journal for agate scoring.
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="index.html#store">Store</a> ·
+        <a href="index.html#details">Details</a> ·
+        <a href="downloads.html">Download APK</a> ·
+        <a href="hub.html">Our Apps</a> ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="terms.html">Terms</a> ·
+        <a href="refunds.html">Refund &amp; Return</a> ·
+        <a href="shipping.html">Shipping</a> ·
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-note">Placeholder storefront: prices, store URLs and product specifications are unconfirmed. This site does not handle payments or card details. Legal pages are templates, not legal advice — have them reviewed before going live.</p>
+  </div>
+</footer>
+
+</body>
+</html>

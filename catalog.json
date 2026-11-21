@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "agate-lens-free",
+    "name": "Agate Lens (free)",
+    "kind": "free",
+    "price_cents": 0,
+    "store_url": "",
+    "sort_order": 1
+  },
+  {
+    "slug": "agate-lens-pro",
+    "name": "Agate Lens Pro",
+    "kind": "digital",
+    "price_cents": 499,
+    "store_url": "",
+    "sort_order": 2
+  },
+  {
+    "slug": "kit-starter",
+    "name": "Starter light kit",
+    "kind": "kit",
+    "price_cents": 5900,
+    "store_url": "",
+    "sort_order": 10
+  },
+  {
+    "slug": "kit-journeyman",
+    "name": "Journeyman light kit",
+    "kind": "kit",
+    "price_cents": 9900,
+    "store_url": "",
+    "sort_order": 11
+  },
+  {
+    "slug": "kit-pro",
+    "name": "Pro light kit",
+    "kind": "kit",
+    "price_cents": 14900,
+    "store_url": "",
+    "sort_order": 12
+  }
+]
