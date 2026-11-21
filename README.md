@@ -26,7 +26,8 @@ framework — upload the files as-is.
   `kit-starter`, `kit-journeyman`, `kit-pro`.
 - Physical kit registration codes prove **kit ownership and support only**.
   They do **not** unlock digital Pro features.
-- Digital Pro is sold through **Google Play Billing inside the app**.
+- **Digital Pro is planned for a future release through Google Play Billing
+  inside the app; it is not available yet.**
 - **No payment or card handling exists anywhere on this site.**
 
 ## Shared app hub
@@ -78,6 +79,8 @@ review before launch.
 |---|---|
 | `index.html` | Storefront: notices, catalog cards, product detail sections |
 | `downloads.html` | Direct APK page: version, checksum, install warnings |
+| `score-sheet.html` | Free printable field tool page for anonymous search traffic |
+| `agate-score-sheet.pdf` | One-page agate scoring sheet linked from that page |
 | `hub.html` | Shared app hub: winners, appreciation, partners, promo strip |
 | `build-for-you.html` | Advertisement / landing page for our app-build service + quote form |
 | `service-flyer.pdf` | Printable one-page version of the service and prices |
