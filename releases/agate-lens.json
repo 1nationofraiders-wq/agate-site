@@ -3,11 +3,11 @@
   "version": "0.2.1",
   "version_code": 3,
   "file": "agate-lens/agate-lens-v0.2.1.apk",
-  "sha256": "d821af8b579609c788be2d5b977edf0e2b18d34db720e3d7c734b8e458a84550",
-  "size_bytes": 58114327,
+  "sha256": "a9b2391e39e4f7dcadfad67a501121e1dc9485fabaee394e32bb51310be29adf",
+  "size_bytes": 57721111,
   "min_sdk": 24,
   "channel": "direct",
   "notes": "Direct-APK pilot: adds the update checker and download page.",
   "published_at": 1795207562329,
-  "download_url": "http://192.168.12.243:8765/downloads/agate-lens/agate-lens-v0.2.1.apk"
+  "download_url": "https://github.com/1nationofraiders-wq/agate-site/releases/download/v0.2.1/agate-lens-v0.2.1.apk"
 }
