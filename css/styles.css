@@ -266,3 +266,95 @@ section + section { border-top: 1px solid var(--line); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* ---------- "We build an app for you" advertisement ---------- */
+.ad-hero {
+  background: linear-gradient(135deg, #1f4063 0%, #2f5d8c 65%, #b5651d 140%);
+  color: #fff;
+}
+.ad-hero__inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: center; padding-top: 52px; padding-bottom: 52px; }
+.ad-hero h1 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.03em; }
+.ad-hero p { color: #dce7f3; max-width: 60ch; margin: 0 0 14px; }
+.ad-hero .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: #f3c89a; font-weight: 700; }
+.ad-hero__lead { font-size: 1.08rem; }
+.ad-hero__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.ad-hero__fine { font-size: 0.84rem; }
+.ad-hero__fine a { color: #ffd9ae; }
+.ad-hero__card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+.ad-phone {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  background: #fff; color: var(--brand-dark); border-radius: 12px;
+  padding: 22px 10px; margin-bottom: 14px; font-size: 0.86rem; font-weight: 700;
+}
+.ad-phone strong { color: var(--accent); font-size: 1.4rem; }
+.btn--light { background: #fff; color: var(--brand-dark); }
+.btn--light:hover { background: #eef2f7; }
+.promo {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 16px 24px; border-left-color: var(--accent);
+  background: linear-gradient(120deg, #1f4063, #2f5d8c); color: #fff;
+}
+.promo h2 { font-size: 1.4rem; margin: 2px 0 6px; }
+.promo p { color: #dce7f3; margin: 0; max-width: 66ch; }
+.promo .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; color: #f3c89a; font-weight: 700; }
+.promo-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.promo .button { background: var(--accent); }
+.steps { max-width: 76ch; padding-left: 22px; }
+.steps li { margin: 10px 0; color: #394253; }
+.link-button {
+  background: none; border: 0; padding: 0; margin: 0; font: inherit;
+  color: var(--brand); text-decoration: underline; text-underline-offset: 2px; cursor: pointer;
+}
+
+/* ---------- Lead forms ---------- */
+.lead-form { display: grid; gap: 12px; max-width: 560px; }
+.lead-form--wide { max-width: 640px; margin-bottom: 16px; }
+.lead-form label { display: grid; gap: 5px; font-weight: 600; font-size: 0.92rem; }
+.lead-form .hint { font-weight: 400; color: var(--muted); }
+.lead-form input[type="text"], .lead-form input[type="email"], .lead-form textarea {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--line);
+  border-radius: 9px; background: #fff; font: inherit; color: var(--ink);
+}
+.lead-form input:focus, .lead-form textarea:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
+.lead-form .check { display: flex; align-items: flex-start; gap: 8px; font-weight: 400; font-size: 0.88rem; color: var(--muted); }
+.lead-form .check input { margin-top: 4px; flex: none; }
+.lead-form button[type="submit"] { justify-self: start; border: 0; cursor: pointer; }
+.lead-form button[disabled] { opacity: 0.6; cursor: wait; }
+.form-status { margin: 0; font-size: 0.9rem; color: var(--brand-dark); min-height: 1.4em; }
+.win-fine { font-size: 0.84rem; color: var(--muted); max-width: 60ch; }
+
+/* ---------- Win window (modal) ---------- */
+.win-backdrop {
+  position: fixed; inset: 0; z-index: 50; display: flex;
+  align-items: center; justify-content: center; padding: 18px;
+  background: rgba(14, 22, 33, 0.65);
+}
+.win-backdrop[hidden] { display: none; }
+.win-dialog {
+  position: relative; width: min(100%, 520px); max-height: 90vh; overflow-y: auto;
+  background: #fff; border-radius: 16px; padding: 26px 26px 22px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  border-top: 6px solid var(--accent);
+}
+.win-dialog h2 { margin: 4px 0 10px; font-size: 1.7rem; }
+.win-dialog > p { color: var(--muted); margin: 0 0 16px; }
+.win-dialog .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; color: var(--accent); font-weight: 700; }
+.win-close {
+  position: absolute; top: 10px; right: 14px; border: 0; background: none;
+  font-size: 1.8rem; line-height: 1; color: var(--muted); cursor: pointer;
+}
+.win-close:hover { color: var(--ink); }
+.win-body .lead-form { gap: 10px; }
+.win-body .win-fine { margin: 14px 0 0; }
+.win-thanks { background: #eef8f2; border: 1px solid #b7dfc8; border-radius: 10px; padding: 14px 16px; color: var(--ink); }
+.win-thanks a { color: var(--brand); }
+
+@media (max-width: 720px) {
+  .ad-hero__inner { grid-template-columns: 1fr; padding-top: 36px; padding-bottom: 36px; }
+}

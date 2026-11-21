@@ -44,6 +44,27 @@ curl -X PUT http://HOST/api/hub/docs/winners/<id> \
   -d '{"title":"...","app":"agate-lens","note":"..."}'
 ```
 
+## App-build advertisement and the "win window"
+
+`build-for-you.html` is a first-party advertisement for a small custom app
+service ("we build an app for you"). `win-rules.html` carries the honest
+giveaway rules: no purchase necessary, one entry per email, monthly draw, no
+cash alternative. Both are labelled as our own service — no third-party ads,
+no click tracking, no fake "you already won" popups.
+
+Entry and quote forms in those pages (and the promo strips on `index.html` and
+`hub.html`) post to `POST /api/store/leads` when `API_BASE_URL` is configured.
+That endpoint stores name, email, idea, explicit consent, IP and timestamp.
+Only an admin with `X-API-Key` can read the list at `GET /api/store/leads`;
+there is a six-per-hour throttle per IP. No payment data is collected.
+
+On free static hosting with `API_BASE_URL: ''`, entries are saved in the
+visitor's browser and, if `CONTACT_EMAIL` in `config.js` is set, opened as a
+pre-filled email. **Set `CONTACT_EMAIL` before publishing**, otherwise entries
+stay on the visitor's device and never reach you. For automatic capture, point
+`API_BASE_URL` at an HTTPS backend (HTTP is blocked by browsers on an HTTPS
+site).
+
 Sponsored entries must be labelled as sponsored. This page is a hub, not an ad
 network: no click tracking, no third-party ad serving, and no sharing personal
 data with sponsors. Advertising would need its own disclosure and privacy
@@ -55,7 +76,11 @@ review before launch.
 |---|---|
 | `index.html` | Storefront: notices, catalog cards, product detail sections |
 | `downloads.html` | Direct APK page: version, checksum, install warnings |
-| `hub.html` | Shared app hub: winners, appreciation, partners |
+| `hub.html` | Shared app hub: winners, appreciation, partners, promo strip |
+| `build-for-you.html` | Advertisement / landing page for our app-build service + quote form |
+| `win-rules.html` | Official giveaway rules (no purchase necessary) |
+| `js/leads.js` | Sends quote/giveaway forms to the leads API, with local/email fallback |
+| `js/win-window.js` | Honest "Win a free app build" popup (no fake win claims) |
 | `js/releases.js` | Loads `/api/releases/{app}/latest`, falls back to bundled JSON |
 | `releases/agate-lens.json` | Bundled latest-release copy written by the publisher |
 | `js/hub.js` | Reads the public `/api/hub/...` feeds; no public write route |
